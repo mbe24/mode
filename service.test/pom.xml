@@ -19,7 +19,7 @@
 	<artifactId>service.test</artifactId>
 	<packaging>jar</packaging>
 
-	<name>${groupId}.${artifactId}</name>
+	<name>${project.groupId}.${project.artifactId}</name>
 	<description>Service Consumer</description>
 
 	<properties>

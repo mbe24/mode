@@ -18,7 +18,7 @@
 	<artifactId>service.impl</artifactId>
 	<packaging>bundle</packaging>
 
-	<name>${groupId}.${artifactId}</name>
+	<name>${project.groupId}.${project.artifactId}</name>
 	<description>Service Implementation</description>
 
 	<dependencies>
