@@ -71,6 +71,13 @@
 			<scope>test</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>org.apache.felix</groupId>
+			<artifactId>org.osgi.compendium</artifactId>
+			<version>1.4.0</version>
+			<scope>test</scope>
+		</dependency>
+
 		<!-- For sane logging -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
