@@ -1,0 +1,12 @@
+language: java
+jdk:
+  - oraclejdk7
+  
+# whitelist
+branches:
+  only:
+    - master
+
+# send coverage data	
+script:
+  - cd parent; mvn install -DskipTests
