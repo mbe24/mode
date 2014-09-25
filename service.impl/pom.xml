@@ -45,7 +45,7 @@
 				<extensions>true</extensions>
 				<configuration>
 					<instructions>
-						<Bundle-SymbolicName>${project.name}.${artifactId}</Bundle-SymbolicName>
+						<Bundle-SymbolicName>${project.name}.${project.artifactId}</Bundle-SymbolicName>
 						<Import-Package>
 						org.beyene.mode.service.*;
 						org.osgi.framework.*

@@ -35,6 +35,7 @@
 					<target>${java.version}</target>
 				</configuration>
 			</plugin>
+			<!-- 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-source-plugin</artifactId>
@@ -61,8 +62,8 @@
 					</execution>
 				</executions>
 			</plugin>
+			-->
 		</plugins>
-
 		<pluginManagement>
 			<plugins>
 				<plugin>

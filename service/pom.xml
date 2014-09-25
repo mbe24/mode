@@ -22,7 +22,7 @@
 				<extensions>true</extensions>
 				<configuration>
 					<instructions>
-						<Bundle-SymbolicName>${project.name}.${artifactId}</Bundle-SymbolicName>
+						<Bundle-SymbolicName>${project.name}.${project.artifactId}</Bundle-SymbolicName>
 						<Export-Package>org.beyene.mode.service</Export-Package>
 					</instructions>
 				</configuration>
