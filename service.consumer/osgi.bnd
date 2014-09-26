@@ -1,2 +1,3 @@
 Export-Package:
 Import-Package: org.beyene.mode.service, org.osgi.framework, org.osgi.util.tracker
+Service-Component: OSGI-INF/component.xml

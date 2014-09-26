@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="service.impl">
-   <implementation class="org.beyene.mode.service.impl.ServiceImpl"/>
+   <implementation class="org.beyene.mode.service.impl.internal.ServiceImpl"/>
    <service>
       <provide interface="org.beyene.mode.service.Service"/>
    </service>
