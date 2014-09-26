@@ -14,7 +14,7 @@
  * limitations under the License.
  * 
  */
-package org.beyene.mode.service.impl;
+package org.beyene.mode.service.impl.internal;
 
 import java.util.Calendar;
 import java.util.Date;

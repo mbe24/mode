@@ -1,0 +1,2 @@
+Export-Package:
+Import-Package: org.beyene.mode.service, org.osgi.framework
