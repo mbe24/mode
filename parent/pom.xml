@@ -30,8 +30,8 @@
 	<modules>
 		<module>../service</module>
 		<module>../service.impl</module>
-		<module>../service.test</module>
 		<module>../service.consumer</module>
+		<module>../service.test</module>
 	</modules>
 
 	<build>

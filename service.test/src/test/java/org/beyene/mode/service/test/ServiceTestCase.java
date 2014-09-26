@@ -4,24 +4,16 @@ import javax.inject.Inject;
 
 import org.beyene.mode.service.Service;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.ops4j.pax.exam.CoreOptions;
 import org.ops4j.pax.exam.Option;
 import org.ops4j.pax.exam.junit.Configuration;
-import org.ops4j.pax.exam.junit.ExamReactorStrategy;
 import org.ops4j.pax.exam.junit.JUnit4TestRunner;
-import org.ops4j.pax.exam.spi.reactors.AllConfinedStagedReactorFactory;
 
 @RunWith(JUnit4TestRunner.class)
-@ExamReactorStrategy(AllConfinedStagedReactorFactory.class)
 public class ServiceTestCase {
-
-//	@Inject
-//    private BundleContext bundleContext;
- 
-//    @Inject
-//    private ConfigurationAdmin configurationAdmin;
 
     @Inject
     private Service service;
@@ -38,16 +30,15 @@ public class ServiceTestCase {
 	
 	@Test
 	public void testInjections() {
-//		Assert.assertNotNull(bundleContext);
-//		Assert.assertNotNull(configurationAdmin);
 		Assert.assertNotNull(service);
 	}
 	
-//	@Test
-//	public void getService() {
-//		Assert.assertEquals("This service implementation should add the numbers", 25, service.add(15, 10));
-//	}
+	@Test
+	public void getService() {
+		Assert.assertEquals("This service implementation should add the numbers", 25, service.add(15, 10));
+	}
 	
+	@Ignore
 	public void setService(Service service) {
 		this.service = service;
 	}
