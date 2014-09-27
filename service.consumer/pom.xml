@@ -15,7 +15,7 @@
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath>../parent</relativePath>
 	</parent>
-	
+
 	<artifactId>service.consumer</artifactId>
 	<packaging>bundle</packaging>
 
@@ -38,20 +38,5 @@
 			<version>${project.version}</version>
 			<scope>provided</scope>
 		</dependency>
-
-		<dependency>
-			<groupId>org.osgi</groupId>
-			<artifactId>org.osgi.core</artifactId>
-			<version>4.2.0</version>
-			<scope>provided</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.osgi</groupId>
-			<artifactId>org.osgi.compendium</artifactId>
-			<version>4.2.0</version>
-			<scope>provided</scope>
-		</dependency>
 	</dependencies>
-
 </project>

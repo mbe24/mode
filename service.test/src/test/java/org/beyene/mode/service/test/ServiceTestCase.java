@@ -1,5 +1,7 @@
 package org.beyene.mode.service.test;
 
+import java.util.Calendar;
+
 import javax.inject.Inject;
 
 import org.beyene.mode.service.Service;
@@ -34,10 +36,21 @@ public class ServiceTestCase {
 	}
 	
 	@Test
-	public void getService() {
+	public void testAdd() {
 		Assert.assertEquals("This service implementation should add the numbers", 25, service.add(15, 10));
 	}
 	
+	@Test
+	public void testGetDate() {
+		Calendar a = Calendar.getInstance();
+		a.setTime(service.getDate());
+		
+		Calendar b = Calendar.getInstance();
+		
+		Assert.assertEquals(a.get(Calendar.YEAR), b.get(Calendar.YEAR));
+	}
+	
+	// needed by eclipse, current setup does not support dc annotations
 	@Ignore
 	public void setService(Service service) {
 		this.service = service;
