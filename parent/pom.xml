@@ -20,13 +20,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.7</java.version>
-
 		<felix.framework.version>4.4.1</felix.framework.version>
-
-		<service.version>0.0.1-SNAPSHOT</service.version>
-		<service.impl.version>0.0.1-SNAPSHOT</service.impl.version>
-		<service.consumer.version>0.0.1-SNAPSHOT</service.consumer.version>
-		<service.test.version>0.0.1-SNAPSHOT</service.test.version>
 	</properties>
 
 	<modules>
