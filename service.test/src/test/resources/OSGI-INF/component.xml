@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="service.test">
-   <implementation class="org.beyene.mode.service.test.ServiceTestCase"/>
-   <reference bind="setService" cardinality="1..1" interface="org.beyene.mode.service.Service" name="Service" policy="static"/>
-</scr:component>
