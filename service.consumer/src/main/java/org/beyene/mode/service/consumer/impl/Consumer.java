@@ -16,17 +16,20 @@
  */
 package org.beyene.mode.service.consumer.impl;
 
+import org.apache.felix.scr.annotations.Activate;
+import org.apache.felix.scr.annotations.Component;
+import org.apache.felix.scr.annotations.Deactivate;
+import org.apache.felix.scr.annotations.Reference;
 import org.beyene.mode.service.Service;
 
+@Component(name = "service.consumer", immediate = true)
 public class Consumer {
 	
+	@Reference(referenceInterface = Service.class)
 	private Service service;
 	
-	public void setService(Service s) {
-		this.service = s;
-	}
-	
-	public void start() {
+	@Activate
+	protected void start() {
 		System.out.println("service.consumer started!");
 		
 		int a = 10, b = 15;
@@ -36,7 +39,8 @@ public class Consumer {
 		System.out.printf("org.beyene.mode.service.Service.getDate()    : %s%n", service.getDate().toString());
 	}
 	
-	public void stop() {
+	@Deactivate
+	protected void stop() {
 		System.out.println("service.consumer stopped!");
 	}
 

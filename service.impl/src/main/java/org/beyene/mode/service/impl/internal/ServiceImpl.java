@@ -19,8 +19,11 @@ package org.beyene.mode.service.impl.internal;
 import java.util.Calendar;
 import java.util.Date;
 
+import org.apache.felix.scr.annotations.Component;
 import org.beyene.mode.service.Service;
 
+@Component(name = "service.impl")
+@org.apache.felix.scr.annotations.Service(value = org.beyene.mode.service.Service.class)
 public class ServiceImpl implements Service {
 
 	@Override
@@ -31,8 +34,6 @@ public class ServiceImpl implements Service {
 
 	@Override
 	public int add(int a, int b) {
-		int result = a + b;
-		return result;
+		return a + b;
 	}
-	
 }
