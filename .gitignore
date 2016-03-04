@@ -1,2 +1,5 @@
 .metadata
 start.bat
+start.sh
+
+.DS_Store
