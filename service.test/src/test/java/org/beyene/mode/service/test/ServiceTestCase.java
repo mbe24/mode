@@ -27,7 +27,9 @@ import org.junit.runner.RunWith;
 import org.ops4j.pax.exam.CoreOptions;
 import org.ops4j.pax.exam.Option;
 import org.ops4j.pax.exam.Configuration;
-import org.ops4j.pax.exam.junit.PaxExam;;
+import org.ops4j.pax.exam.junit.PaxExam;
+
+import static org.ops4j.pax.exam.CoreOptions.mavenBundle;
 
 @RunWith(PaxExam.class)
 public class ServiceTestCase {
@@ -39,9 +41,9 @@ public class ServiceTestCase {
 	public Option[] config() {
 		return CoreOptions.options(
 				/* needed for ds annotations */
-				CoreOptions.mavenBundle("org.apache.felix", "org.apache.felix.scr", "1.8.2"),
-				CoreOptions.bundle("reference:file:../service/target/service-0.0.1-SNAPSHOT.jar"),
-				CoreOptions.bundle("reference:file:../service.impl/target/service.impl-0.0.1-SNAPSHOT.jar"),
+				mavenBundle("org.apache.felix", "org.apache.felix.scr", "1.8.2"),
+				mavenBundle().groupId("org.beyene.mode").artifactId("service").versionAsInProject(),
+				mavenBundle().groupId("org.beyene.mode").artifactId("service.impl").versionAsInProject(),
 				CoreOptions.junitBundles());
 	}
 	
