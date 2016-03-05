@@ -23,12 +23,12 @@
 	<description>Service Consumer</description>
 
 	<properties>
-		<pax.exam.version>2.5.0</pax.exam.version>
-		<pax.url.version>1.4.0</pax.url.version>
+		<pax.exam.version>4.8.0</pax.exam.version>
+		<pax.url.version>2.4.6</pax.url.version>
 	</properties>
 
 	<dependencies>
-	
+
 		<dependency>
 			<groupId>${project.groupId}</groupId>
 			<artifactId>service</artifactId>
@@ -37,6 +37,12 @@
 		</dependency>
 
 		<!-- Pax Exam Dependencies -->
+		<dependency>
+			<groupId>javax.inject</groupId>
+			<artifactId>javax.inject</artifactId>
+			<version>1</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.ops4j.pax.exam</groupId>
 			<artifactId>pax-exam-container-native</artifactId>
