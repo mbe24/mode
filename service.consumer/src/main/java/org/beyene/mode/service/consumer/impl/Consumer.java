@@ -20,13 +20,13 @@ import org.apache.felix.scr.annotations.Activate;
 import org.apache.felix.scr.annotations.Component;
 import org.apache.felix.scr.annotations.Deactivate;
 import org.apache.felix.scr.annotations.Reference;
-import org.beyene.mode.service.Service;
+import org.beyene.mode.service.TestService;
 
 @Component(name = "service.consumer", immediate = true)
 public class Consumer {
 	
-	@Reference(referenceInterface = Service.class)
-	private Service service;
+  @Reference
+	private TestService service;
 	
 	@Activate
 	protected void start() {

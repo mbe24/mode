@@ -14,56 +14,65 @@
  * limitations under the License.
  * 
  */
+
 package org.beyene.mode.service.test;
+
+import static org.ops4j.pax.exam.CoreOptions.mavenBundle;
 
 import java.util.Calendar;
 
 import javax.inject.Inject;
 
-import org.beyene.mode.service.Service;
+import org.beyene.mode.service.TestService;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.ops4j.pax.exam.Configuration;
 import org.ops4j.pax.exam.CoreOptions;
 import org.ops4j.pax.exam.Option;
-import org.ops4j.pax.exam.Configuration;
 import org.ops4j.pax.exam.junit.PaxExam;
+import org.ops4j.pax.exam.spi.reactors.ExamReactorStrategy;
+import org.ops4j.pax.exam.spi.reactors.PerMethod;
 
-import static org.ops4j.pax.exam.CoreOptions.mavenBundle;
+@RunWith (PaxExam.class)
+@ExamReactorStrategy (PerMethod.class)
+public class ServiceTestCase
+{
 
-@RunWith(PaxExam.class)
-public class ServiceTestCase {
+  @Inject
+  private TestService service;
 
-    @Inject
-    private Service service;
-    
-	@Configuration
-	public Option[] config() {
-		return CoreOptions.options(
-				/* needed for ds annotations */
-				mavenBundle("org.apache.felix", "org.apache.felix.scr", "1.8.2"),
-				mavenBundle().groupId("org.beyene.mode").artifactId("service").versionAsInProject(),
-				mavenBundle().groupId("org.beyene.mode").artifactId("service.impl").versionAsInProject(),
-				CoreOptions.junitBundles());
-	}
-	
-	@Test
-	public void testInjections() {
-		Assert.assertNotNull(service);
-	}
-	
-	@Test
-	public void testAdd() {
-		Assert.assertEquals("This service implementation should add the numbers", 25, service.add(15, 10));
-	}
-	
-	@Test
-	public void testGetDate() {
-		Calendar a = Calendar.getInstance();
-		a.setTime(service.getDate());
-		
-		Calendar b = Calendar.getInstance();
-		
-		Assert.assertEquals(a.get(Calendar.YEAR), b.get(Calendar.YEAR));
-	}
+  @Configuration
+  public Option[] config()
+  {
+    return CoreOptions.options(
+        /* needed for ds annotations */
+        mavenBundle("org.apache.felix", "org.apache.felix.scr", "1.8.2"),
+        mavenBundle().groupId("org.beyene.mode").artifactId("service.impl").versionAsInProject(),
+        mavenBundle().groupId("org.beyene.mode").artifactId("service").versionAsInProject(),
+        CoreOptions.junitBundles());
+  }
+
+  @Test
+  public void testInjections()
+  {
+    Assert.assertNotNull(service);
+  }
+
+  @Test
+  public void testAdd()
+  {
+    Assert.assertEquals("This service implementation should add the numbers", 25, service.add(15, 10));
+  }
+
+  @Test
+  public void testGetDate()
+  {
+    Calendar a = Calendar.getInstance();
+    a.setTime(service.getDate());
+
+    Calendar b = Calendar.getInstance();
+
+    Assert.assertEquals(a.get(Calendar.YEAR), b.get(Calendar.YEAR));
+  }
 }

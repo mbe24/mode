@@ -18,7 +18,7 @@ package org.beyene.mode.service;
 
 import java.util.Date;
 
-public interface Service {
+public interface TestService {
 
 	public Date getDate();
 	

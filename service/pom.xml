@@ -5,7 +5,7 @@
 		<groupId>org.beyene.mode</groupId>
 		<artifactId>parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath>../parent</relativePath>
+		<relativePath>../</relativePath>
 	</parent>
 
 	<artifactId>service</artifactId>

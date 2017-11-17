@@ -2,13 +2,13 @@ package org.beyene.mode.service.impl.internal;
 
 import java.util.Calendar;
 
-import org.beyene.mode.service.Service;
+import org.beyene.mode.service.TestService;
 import org.junit.Assert;
 import org.junit.Test;
 
 public class ServiceImplTest {
 
-	private final Service service = new ServiceImpl();
+	private final TestService service = new ServiceImpl();
 
 	@Test
 	public void testGetDate() throws Exception {
