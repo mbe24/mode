@@ -20,11 +20,12 @@ import java.util.Calendar;
 import java.util.Date;
 
 import org.apache.felix.scr.annotations.Component;
-import org.beyene.mode.service.Service;
+import org.apache.felix.scr.annotations.Service;
+import org.beyene.mode.service.TestService;
 
 @Component(name = "service.impl")
-@org.apache.felix.scr.annotations.Service(value = org.beyene.mode.service.Service.class)
-public class ServiceImpl implements Service {
+@Service
+public class ServiceImpl implements TestService {
 
 	@Override
 	public Date getDate() {

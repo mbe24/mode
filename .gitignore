@@ -1,4 +1,7 @@
 .metadata
+.project
+.settings/
+
 start.bat
 start.sh
 
