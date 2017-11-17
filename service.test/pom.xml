@@ -54,6 +54,13 @@
 	</build>
 
 	<dependencies>
+		<dependency>
+			<groupId>org.apache.felix</groupId>
+			<artifactId>org.apache.felix.framework</artifactId>
+			<version>${felix.framework.version}</version>
+			<scope>test</scope>
+			<optional>true</optional>
+		</dependency>
 
 		<dependency>
 			<groupId>${project.groupId}</groupId>
@@ -104,13 +111,6 @@
 			<scope>test</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>org.apache.felix</groupId>
-			<artifactId>org.apache.felix.framework</artifactId>
-			<version>${felix.framework.version}</version>
-			<scope>test</scope>
-			<optional>true</optional>
-		</dependency>
 
 		<!-- For sane logging -->
 		<dependency>

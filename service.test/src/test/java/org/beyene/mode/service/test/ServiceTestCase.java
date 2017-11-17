@@ -46,11 +46,11 @@ public class ServiceTestCase
   public Option[] config()
   {
     return CoreOptions.options(
+        CoreOptions.junitBundles(),
         /* needed for ds annotations */
-        mavenBundle("org.apache.felix", "org.apache.felix.scr", "1.8.2"), // current version: 2.0.12 (does not work)
+        mavenBundle("org.apache.felix", "org.apache.felix.scr", "2.0.12"),
         mavenBundle().groupId("org.beyene.mode").artifactId("service.impl").versionAsInProject(),
-        mavenBundle().groupId("org.beyene.mode").artifactId("service").versionAsInProject(),
-        CoreOptions.junitBundles());
+        mavenBundle().groupId("org.beyene.mode").artifactId("service").versionAsInProject());
   }
 
   @Test
