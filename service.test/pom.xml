@@ -22,11 +22,6 @@
 	<name>${project.groupId}.${project.artifactId}</name>
 	<description>Service Integration Test</description>
 
-	<properties>
-		<pax.exam.version>4.8.0</pax.exam.version>
-		<pax.url.version>2.4.6</pax.url.version>
-	</properties>
-
 	<build>
 		<plugins>
 			<plugin>

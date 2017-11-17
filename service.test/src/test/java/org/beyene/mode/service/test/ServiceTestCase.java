@@ -32,10 +32,10 @@ import org.ops4j.pax.exam.CoreOptions;
 import org.ops4j.pax.exam.Option;
 import org.ops4j.pax.exam.junit.PaxExam;
 import org.ops4j.pax.exam.spi.reactors.ExamReactorStrategy;
-import org.ops4j.pax.exam.spi.reactors.PerMethod;
+import org.ops4j.pax.exam.spi.reactors.PerSuite;
 
 @RunWith (PaxExam.class)
-@ExamReactorStrategy (PerMethod.class)
+@ExamReactorStrategy (PerSuite.class)
 public class ServiceTestCase
 {
 
@@ -47,7 +47,7 @@ public class ServiceTestCase
   {
     return CoreOptions.options(
         /* needed for ds annotations */
-        mavenBundle("org.apache.felix", "org.apache.felix.scr", "1.8.2"),
+        mavenBundle("org.apache.felix", "org.apache.felix.scr", "1.8.2"), // current version: 2.0.12 (does not work)
         mavenBundle().groupId("org.beyene.mode").artifactId("service.impl").versionAsInProject(),
         mavenBundle().groupId("org.beyene.mode").artifactId("service").versionAsInProject(),
         CoreOptions.junitBundles());

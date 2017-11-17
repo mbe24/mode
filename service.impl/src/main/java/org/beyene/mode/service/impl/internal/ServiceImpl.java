@@ -19,12 +19,10 @@ package org.beyene.mode.service.impl.internal;
 import java.util.Calendar;
 import java.util.Date;
 
-import org.apache.felix.scr.annotations.Component;
-import org.apache.felix.scr.annotations.Service;
 import org.beyene.mode.service.TestService;
+import org.osgi.service.component.annotations.Component;
 
 @Component(name = "service.impl")
-@Service
 public class ServiceImpl implements TestService {
 
 	@Override
