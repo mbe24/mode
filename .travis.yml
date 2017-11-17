@@ -4,4 +4,4 @@ jdk:
   - oraclejdk7
   
 script:
-  - cd parent; mvn install
+  - mvn install
