@@ -24,21 +24,21 @@ import org.osgi.service.component.annotations.Reference;
 
 @Component(name = "service.consumer", immediate = true)
 public class Consumer {
-	
-  @Reference
+
+	@Reference
 	private TestService service;
-	
+
 	@Activate
 	protected void start() {
 		System.out.println("service.consumer started!");
-		
+
 		int a = 10, b = 15;
 		int c = service.add(a, b);
-		
+
 		System.out.printf("org.beyene.mode.service.Service.add(int, int): %d + %d = %d%n", a, b, c);
 		System.out.printf("org.beyene.mode.service.Service.getDate()    : %s%n", service.getDate().toString());
 	}
-	
+
 	@Deactivate
 	protected void stop() {
 		System.out.println("service.consumer stopped!");

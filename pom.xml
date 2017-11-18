@@ -27,7 +27,7 @@
 	</properties>
 
 	<modules>
-		<module>service</module>
+		<module>service.api</module>
 		<module>service.impl</module>
 		<module>service.consumer</module>
 		<module>service.test</module>

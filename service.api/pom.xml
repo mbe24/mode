@@ -8,7 +8,7 @@
 		<relativePath>../</relativePath>
 	</parent>
 
-	<artifactId>service</artifactId>
+	<artifactId>service.api</artifactId>
 	<packaging>bundle</packaging>
 
 	<name>${project.groupId}.${project.artifactId}</name>
@@ -19,6 +19,12 @@
 			<plugin>
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-bundle-plugin</artifactId>
+
+				<configuration>
+					<instructions>
+						<Export-Package>org.beyene.mode.service.*</Export-Package>
+					</instructions>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

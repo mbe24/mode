@@ -64,7 +64,7 @@
 
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>service</artifactId>
+			<artifactId>service.api</artifactId>
 			<version>${project.version}</version>
 			<scope>test</scope>
 		</dependency>

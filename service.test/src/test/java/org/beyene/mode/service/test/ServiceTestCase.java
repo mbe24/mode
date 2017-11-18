@@ -49,8 +49,8 @@ public class ServiceTestCase
         CoreOptions.junitBundles(),
         /* needed for ds annotations */
         mavenBundle("org.apache.felix", "org.apache.felix.scr", "2.0.12"),
-        mavenBundle().groupId("org.beyene.mode").artifactId("service.impl").versionAsInProject(),
-        mavenBundle().groupId("org.beyene.mode").artifactId("service").versionAsInProject());
+        mavenBundle().groupId("org.beyene.mode").artifactId("service.api").versionAsInProject(),
+        mavenBundle().groupId("org.beyene.mode").artifactId("service.impl").versionAsInProject());
   }
 
   @Test
